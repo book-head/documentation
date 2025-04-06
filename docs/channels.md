@@ -22,6 +22,7 @@ Work (Canonical author(s) and title)
     └── Copy (condition, price, quantity, cost, etc)
 ```
 
+Each channel has a different way of transforming this Bookhead data model into the channel's unique data model. The details about each implementation are included in the specific channel sections below.
 
 ## Squarespace
 You can list your books on your Squarespace website. Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy sells in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
