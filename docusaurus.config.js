@@ -1,24 +1,21 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Bookhead Documentation',
-  tagline: 'Modern ecommerce for independent bookstores',
-  favicon: 'img/favicon.ico',
+  tagline: 'Software for independent bookstores',
+  favicon: 'img/bookhead-single.png',
 
   // Set the production url of your site here
-  url: 'https://book-head.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
+  url: 'https://docs.bookhead.net',
+
   baseUrl: '/',
 
   // GitHub pages deployment config
-  organizationName: 'book-head', // Usually your GitHub org/user name
-  projectName: 'documentation', // Usually your repo name
-  deploymentBranch: 'gh-pages',
+  organizationName: 'book-head',
+  projectName: 'documentation',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -54,12 +51,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/bookhead-dots.png',
       navbar: {
-        title: 'Bookhead Docs',
+        title: 'Bookhead',
         logo: {
           alt: 'Bookhead Logo',
-          src: 'img/logo.svg',
+          src: 'img/bookhead-single.png',
         },
         items: [
           {
@@ -69,8 +66,8 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/book-head/documentation',
-            label: 'GitHub',
+            href: 'https://bookhead.net',
+            label: 'Bookhead site',
             position: 'right',
           },
         ],
@@ -83,26 +80,30 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/intro',
+                to: '/docs/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Help',
             items: [
               {
                 label: 'Support',
                 href: 'mailto:support@bookhead.net',
               },
+              {
+                label: 'Bookhead',
+                href: 'https://bookhead.net'
+              }
             ],
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Bookhead. Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
+      // prism: {
+      //   theme: lightCodeTheme,
+      //   darkTheme: darkCodeTheme,
+      // },
     }),
 };
 
