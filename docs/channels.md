@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# Channels
+# Selling on channels
 
-**Channels** is a Bookhead Connect feature that allows you to sell your books on multiple sales channels. Currently, we support selling books on **Squarespace**, **eBay**, and **Biblio**, and soon we'll support **Shopify**. This automatic inventory data syncing system keeps your bookstore's local store inventory up to date on all of your online sales channels.
+**channels** is a Bookhead Connect feature that allows you to sell your books on multiple sales channels. Currently, we support selling books on **Squarespace**, **eBay**, and **Biblio**, and soon we'll support **Shopify**. This automatic inventory data syncing system keeps your bookstore's local store inventory up to date on all of your online sales channels.
 
 ### Supported platforms
 
