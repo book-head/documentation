@@ -14,7 +14,7 @@ We support these e-commerce platforms and marketplaces:
 - **[Biblio](#biblio)**
 
 ## Squarespace
-Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy sells in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
+Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy changes in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
 
 
 ### How to sync your inventory to a Squarespace website
