@@ -7,7 +7,7 @@ Bookhead provides a platform for connecting your local store inventory with vari
 
 
 ## Accessing the inventory
-To visit the inventory, visit `https://<store>.bookhead.net/staff` but replace `<store>` with the store identifier we gave you upon onboarding. Email <strong>support@bookhead.net</strong> if you forgot this.
+To access the inventory, visit `https://<store>.bookhead.net/staff` but replace `<store>` with the store identifier we gave you upon onboarding. Email <strong>support@bookhead.net</strong> if you forgot this.
 
 ## Creating inventory
 Bookhead can create a book product enriched by an automatic bibliographic creation process with just a few simple pieces of information: isbn, quantity, and price. 
