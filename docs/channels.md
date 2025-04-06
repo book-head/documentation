@@ -13,7 +13,7 @@ We support these e-commerce platforms and marketplaces:
 - **[eBay](#ebay)**
 - **[Biblio](#biblio)**
 
-### Converting your inventory data so it works on different channels
+### Transforming your inventory data so it works on different channels
 Bookhead stores your inventory securely in our database. We format this data into what is known as a "data model." Similarly, each channel has its own unique, internal data model. [You can read a deeper explanation about our data model here](./inventory.md#bookheads-data-model), but importantly for this documentation about the **channels** feature, your inventory data is stored in Bookhead's database like this:
 
 ```
@@ -25,7 +25,7 @@ Work (Canonical author(s) and title)
 Each channel has a different way of transforming this Bookhead data model into the channel's unique data model. The details about each implementation are included in the specific channel sections below.
 
 ## Squarespace
-You can list your books on your Squarespace website. Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy sells in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
+Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy sells in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
 
 
 ### How to sync your inventory to a Squarespace website
@@ -40,8 +40,8 @@ You'll need a Squarespace store with an e-commerce subscription.
 5. Save the new channel.
 6. Email <a href="mailto:support@bookhead.net"><strong>support@bookhead.net</strong></a> once you've done all of this, and we will finish setting up the automated syncing.
 
-### How the products are mapped
-With the Bookhead data model in mind, we map your products to Squarespace's unique data model where cach `Edition` becomes a product on Squarespace, and each `Copy` becomes a variant of the product:
+### How the products are tranformed
+With the Bookhead data model [mentioned above](#converting-your-inventory-data-so-it-works-on-different-channels) in mind, we transform your products to Squarespace's unique data model where cach `Edition` becomes a product on Squarespace, and each `Copy` becomes a variant of the product:
 
 ```
 Product (Edition level)
