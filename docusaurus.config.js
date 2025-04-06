@@ -53,10 +53,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/bookhead-dots.png',
       navbar: {
-        title: 'Bookhead',
         logo: {
           alt: 'Bookhead Logo',
-          src: 'img/bookhead-single.png',
+          src: 'img/bookhead-horizontal.png',
         },
         items: [
           {
