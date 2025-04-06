@@ -16,5 +16,5 @@ If you are interested in using Bookhead but we don't yet support your point of s
 Bookhead Complete includes a custom e-commerce store in addition to all of the inventory syncing and other features of Bookhead Connect. You can sell your products on an e-commerce website with custom content, with a custom domain for your store.
 
 ## Table of contents
-- [Inventory](/docs/inventory.md)
-- [Channels](/docs/channels.md)
+- [Inventory](./inventory.md)
+- [Channels](./channels.md)

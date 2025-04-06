@@ -14,7 +14,7 @@ We support these e-commerce platforms and marketplaces:
 - **[Biblio](#biblio)**
 
 ### Converting your inventory data so it works on different channels
-Bookhead stores your inventory securely in our database. We format this data into what is known as a "data model." Similarly, each channel has its own unique, internal data model. [You can read a deeper explanation about our data model here](/docs/inventory.md#bookheads-data-model), but importantly for this documentation about the **channels** feature, your inventory data is stored in Bookhead's database like this:
+Bookhead stores your inventory securely in our database. We format this data into what is known as a "data model." Similarly, each channel has its own unique, internal data model. [You can read a deeper explanation about our data model here](./inventory.md#bookheads-data-model), but importantly for this documentation about the **channels** feature, your inventory data is stored in Bookhead's database like this:
 
 ```
 Work (Canonical author(s) and title)
