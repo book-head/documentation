@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Overview
-Bookhead helps independent bookstores sell their books online. We do that with two products: Bookhead Connect and Bookhead Complete.
+Bookhead helps your independent bookstore sell books online. We do that with two products: Bookhead Connect and Bookhead Complete.
 
 ## Bookhead Connect
 
