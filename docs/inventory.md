@@ -17,7 +17,7 @@ You can create books three different ways:
 ### 1. Automatically via FTP
 We have an FTP server that can accept files automatically from your point of sales provider. Contact support@bookhead.net to set this up, because it requires coordination with your point of sales provider.
 
-Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead is able to work with a variety formats. Our system is designed so that it's easy for us to add or adjust for any customer or system.
+Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety formats. Our system is designed so it's easy for us to add a new customer or point of sales.
 
 
 ### 2. Upload a file via the admin
@@ -49,10 +49,10 @@ We can accept these additional, optional fields:
 ### 3. Manually in the admin
 Visit `https://<store>.bookhead.net/staff/books/new/` and you can use the form to create a new book. 
 
-You can search bibliographic data by ISBN or title. The ISBN search has better bibliographic. The title search uses data from Open Library, which can be handy when your edition predates ISBNs (note that this search isn't the most reliable since it's a free data source, but it can still be helpful for filling out some basics of your title).
+You can search bibliographic data by ISBN or title. The ISBN search has better bibliographic data. The title search uses data from Open Library, which can be handy when your edition predates ISBNs (note that this search isn't the most reliable since it's a free data source, but it can still be helpful for filling out some basics of your title).
 
 ## About Bookhead's data model
-Our bibliographic data model drives everything about Bookhead. For bibliographic metadata, a "book" doesn't **exactly** describe the object you're trying to sell. A "work" can have multiple "editions", each with unique "copies" with altering attributes. Solving this bibliographic data problem has a long history in library science, so created a bibliographic data model inspired by [the Open Library's database design](https://openlibrary.org/dev/docs/api/books) and [Functional Requirements for Bibliographic Records](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). We applied our own take on bibliographic that is simple for the needs of online book retail. This is still a work in progress as we work with more types of bibliographic data and find missing parts (for example, we currently don't support BISAC codes but it would be easy to add once a new data source or customer requires this). We've found this data model has been reliable as this application has changed over time.
+Our bibliographic data model drives everything about Bookhead. For bibliographic metadata, a *book* doesn't exactly describe the object you're trying to sell. A "work" can have multiple "editions", and each can have unique "copies" with altering attributes. Solving this bibliographic data problem has a long history in library science, so we created a bibliographic data model inspired by [the Open Library's database design](https://openlibrary.org/dev/docs/api/books) and [Functional Requirements for Bibliographic Records](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). We applied our own take on bibliographic data that is simple for the needs of online book retail. This is still a work in progress as we work with more types of bibliographic data and find missing parts (for example, we currently don't support BISAC codes but it would be easy to add once a new data source or customer requires this). We've found this data model has been reliable as this application has changed over time.
 
 ## Relevant models and their fields
 
@@ -170,7 +170,7 @@ These models have relationships:
 - notes: "Small tear on back cover, otherwise very good condition"
 
 ## How Bookhead uses this data
-The `Copy` will be what you are selling online, the product that you can hold in your hands at your store and ship out to customers. Combined with the `Work` and `Edition`, your `Copy` will be listed on your sales channels with the bibliographic data that describes that particular product.
+The `Copy` will be what you are selling online. This is the product that you can hold in your hands at your store and ship out to customers. Combined with bibliographic data about the `Work` and `Edition`, your `Copy` will be listed on your sales channels with the bibliographic data that describes that particular product.
 
 ### A Copy of a book is a powerful thing
 The `Copy` can be listed on multiple sales channels, like Squarespace, Biblio, and eBay. For more information about that, [see our documentation about `channels`](/docs/channels.md)
