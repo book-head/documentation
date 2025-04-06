@@ -174,3 +174,6 @@ The `Copy` will be what you are selling online. This is the product that you can
 
 ### A Copy of a book is a powerful thing
 The `Copy` can be listed on multiple sales channels, like Squarespace, Biblio, and eBay. For more information about that, [see our documentation about `channels`](/docs/channels.md)
+
+### Data privacy and control
+We only share your inventory data with the third party platforms which you explicity consent to. We're able to share your inventory data with Squarespace, Biblio, eBay, and Shopify. We will share your data if you choose to share the data with a specific platform, and the data will only be shared with an account on the platform that you control.
