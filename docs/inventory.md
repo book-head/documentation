@@ -54,6 +54,8 @@ You can search bibliographic data by ISBN or title. The ISBN search has better b
 ## About Bookhead's data model
 Our bibliographic data model drives everything about Bookhead. Within the context of storing bibliographic metadata about your inventory in a database, a *book* doesn't exactly describe the object you're trying to sell. Instead, a "work" can have multiple "editions", and each edition can have unique "copies" with altering attributes. Solving this bibliographic data problem has a long history in library science, so we created a bibliographic data model inspired by [the Open Library's database design](https://openlibrary.org/dev/docs/api/books) and [Functional Requirements for Bibliographic Records](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). We applied our own take that is simple for the needs of online book retail. This is still a work in progress as we continually encounter new sources of bibliographic data and prioritize missing parts (for example, we currently don't support BISAC codes because it's not been a priority, but it would be easy to add once a new data source or customer requires this). We've found this data model has been reliable and flexible to change as this application has evolved over time.
 
+**Critically, this data model makes it easy for you to sell both new and used books on the same online sales channels, which isn't common in bookselling software.** Bookhead doesn't care if your copy is used or new. That is an attribute on the copy.
+
 ## Relevant models and their fields
 
 ```
