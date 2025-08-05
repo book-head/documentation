@@ -19,6 +19,8 @@ We have an FTP server that can accept files automatically from your point of sal
 
 Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety formats. Our system is designed so it's easy for us to add a new customer or point of sales.
 
+For detailed setup instructions, see our [FTP Integration Guide](ftp-setup.md).
+
 
 ### 2. Upload a file via the admin
 Visit `https://<store>.bookhead.net/staff/books/import/` to upload a file.
