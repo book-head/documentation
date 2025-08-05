@@ -22,7 +22,7 @@ For other ways to add inventory (including manual entry and web-based file uploa
 - **Protocol**: SFTP
 - **Authentication**: Username/Password
 - **File Format**: CSV (UTF-8 encoding)
-- **File Name**: `inventory.csv`
+- **File Name**: Any name (e.g., `inventory.csv`, `books.csv`, `stock.csv`)
 - **File Size**: Under 10MB
 
 ### Store Credentials
@@ -30,6 +30,17 @@ Each store receives unique FTP credentials:
 - **Username**: (provided by Bookhead support)
 - **Password**: (provided by Bookhead support)
 - **Directory**: (provided by Bookhead support)
+
+### For POS Vendors
+When setting up automated FTP uploads for your customers:
+
+1. **Use the provided credentials** for each store
+2. **Upload to the store's directory** (provided with credentials)
+3. **File naming is flexible** - any CSV filename will work
+4. **Schedule uploads** as needed (daily/weekly recommended)
+5. **Monitor processing** - files are processed automatically within 5-10 minutes
+
+*Need help with integration? Contact support@bookhead.net for technical assistance.*
 
 ## Automated FTP with POS Providers
 
@@ -185,7 +196,7 @@ Item Code,Title,QOH,Price,Vendor,Category,Misc1,Misc2
 ### Upload Steps
 1. Connect to `files.bookhead.net` via SFTP
 2. Navigate to your store directory (provided by support)
-3. Upload file as `inventory.csv`
+3. Upload file with any name (e.g., `inventory.csv`, `books.csv`, `stock.csv`)
 4. File is automatically processed within 5-10 minutes
 
 ### Processing Details
@@ -230,10 +241,10 @@ isbn,quantity,price,book_condition,notes
 - Try different FTP client if needed
 
 **File Upload Issues**
-- Ensure file is named `inventory.csv`
 - Check file format (CSV, UTF-8 encoding)
 - Verify required fields are present
 - Check file size (should be under 10MB)
+- File name can be anything (e.g., `inventory.csv`, `books.csv`, `stock.csv`)
 
 **Processing Problems**
 - Wait 5-10 minutes for processing
@@ -254,7 +265,7 @@ isbn,quantity,price,book_condition,notes
 | "Invalid ISBN format" | Use 10 or 13-digit ISBNs only |
 | "Price must be numeric" | Remove currency symbols, use decimal format |
 | "Quantity must be positive" | Use positive numbers only |
-| "File not found" | Ensure file is named `inventory.csv` |
+| "File not found" | Ensure file is uploaded to the correct directory |
 | "Connection timeout" | Check internet connection and try again |
 
 ### Error Response
