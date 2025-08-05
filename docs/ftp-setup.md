@@ -309,4 +309,4 @@ If you need FTP credentials:
 
 ---
 
-**Next Steps**: Once FTP is configured, your inventory will automatically sync to your sales channels. See our [Channel Integration Guide](../selling-on-channels) for details on selling your inventory online.
+**Next Steps**: Once FTP is configured, your inventory will automatically sync to your sales channels. See our [Channel Integration Guide](channels.md) for details on selling your inventory online.
