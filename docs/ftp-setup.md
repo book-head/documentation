@@ -65,7 +65,7 @@ Bookhead works with any POS system that can export inventory via FTP. We can typ
 If you manage your inventory in a spreadsheet, already sell on Biblio, or prefer to upload files yourself, you can use free FTP software:
 
 **Setup example with FileZilla:**
-1. Download FileZilla from [filezilla-project.org](filezilla-project.org)
+1. Download FileZilla from [filezilla-project.org](https://filezilla-project.org)
 2. Enter connection details:
    - Host: files.bookhead.net
    - Username: (provided by support)
