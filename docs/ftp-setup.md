@@ -24,12 +24,20 @@ Both methods use the same secure server and file processing.
 1. Contact support@bookhead.net with store details
 2. We provide unique FTP credentials for each store
 3. Configure automated uploads to the store's directory
-4. Files process instantly  (see processing times below)
+4. Files process instantly  (see [file processing](#file-processing) below)
+
+### Connection URI format
+For FTP clients and automated systems, use:
+```
+sftp://<username>@files.bookhead.net
+```
+
+Example: `sftp://bearcreekbooks@files.bookhead.net`
 
 ### Command line example
 ```bash
-sftp friendlycitybooks@files.bookhead.net
-friendlycitybooks@files.bookhead.net's password: 
+sftp bearcreekbooks@files.bookhead.net
+bearcreekbooks@files.bookhead.net's password: 
 Connected to files.bookhead.net.
 sftp> put inventory.csv
 Uploading inventory.csv to /inventory.csv
@@ -104,13 +112,14 @@ isbn,quantity,price,notes
 ```
 
 1. Upload via FTP
-2. Check your Bookhead admin (see processing times below)
+2. Check your Bookhead admin (see [file processing](#file-processing) below)
 3. Verify the book appears in your inventory
 
 ---
 
 ## File processing
 
+- **File naming**: Any filename works (inventory.csv, books_jan_2025.csv, etc.) - Bookhead processes any CSV file you upload
 - **Format**: CSV files with UTF-8 encoding
 - **Processing time**: 5-30 minutes upon very first upload (depending on inventory size), then a 1-5 minutes for subsequent uploads
 - **Validation**: ISBNs are checked and enhanced with bibliographic details about the book (like author, title, description, images, etc)
