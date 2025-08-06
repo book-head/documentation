@@ -4,8 +4,8 @@ Bookhead accepts inventory files via secure FTP upload. Upload your CSV file, an
 
 ## Two ways to upload
 
-**Automated uploads**: Your POS system uploads files automatically
-**Manual uploads**: You upload files yourself using an FTP client
+1. **Automated uploads**: Your POS system uploads files automatically
+2. **Manual uploads**: You upload files yourself using an FTP client
 
 Both methods use the same secure server and file processing.
 
