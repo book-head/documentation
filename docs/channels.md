@@ -10,25 +10,114 @@ sidebar_position: 3
 
 We support these e-commerce platforms and marketplaces:
 - **[Squarespace](#squarespace)**
-- **[eBay](#ebay)**
-- **[Biblio](#biblio)**
+- **[Shopify](#shopify)**
+- [eBay]
+- [Biblio]
 
 ## Squarespace
+
 Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy changes in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
 
+### Requirements
 
-### How to sync your inventory to a Squarespace website
+- **Squarespace plan with Inventory API access:**
+  - Commerce Basic or higher (old plans)
+  - Core or higher (new plans)
+  - [Compare Squarespace plans →](https://www.squarespace.com/pricing)
+- Store Administrator access
 
-You'll need a Squarespace store with an e-commerce subscription.
+**Not sure which plan you have?** When you try to create an API key in Step 1, Squarespace will let you know if you need to upgrade. [Learn more about Squarespace plans →](https://support.squarespace.com/hc/en-us/articles/206536797-Choosing-the-right-Squarespace-plan)
 
-#### Connect Squarespace with Bookhead:
-1. [Create an API key for your Squarespace store by following their latest documentation](https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys#toc-api-key-security.).
-2. In the Bookhead admin, create a new channel: `https://<store>.bookhead.net/staff/channels/create/`.
-3. Choose `Squarespace`.
-4. Paste your Squarespace API key into the `access token` text area.
-5. Save the new channel.
-6. Email <a href="mailto:support@bookhead.net"><strong>support@bookhead.net</strong></a> once you've done all of this, and we will finish setting up the automated syncing.
+### How to Connect Your Squarespace Store
 
+**Step 1: Navigate to Developer API Keys in Squarespace**
+
+1. Log into your Squarespace account
+2. Go to **Settings** → **Advanced** → **Developer API Keys**
+
+Need help? [Squarespace's API key documentation →](https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys)
+
+![Squarespace Settings showing Developer API Keys option](/img/docs/squarespace-api-keys.png)
+
+**Step 2: Create and Configure Your API Key in Squarespace**
+
+1. Click **Generate Key**
+2. Name it "Bookhead" 
+3. Under **Permissions**, select:
+   - **Products** (Read and Write)
+   - **Inventory** (Read and Write)
+   - **Orders** (Read and Write)
+   - **Profiles** (Read Only)
+4. Click **Generate Key** in the top right corner of the popup box
+
+![API key generation form with Bookhead permissions selected](/img/docs/squarespace-generate-api-key.png)
+
+**Step 3: Copy Your API Key**
+
+**Important:** Copy the key immediately and store it in a safe place, like a password. You'll only see it once! If you lose it, you'll need to generate a new one.
+
+![Generated API key with copy button highlighted](/img/docs/squarespace-generated-api-key.png)
+
+Need help? [Squarespace's API key documentation →](https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys)
+
+**Step 4: Add Your API Key to Bookhead**
+
+1. Log into your Bookhead account: `https://<yourstore>.bookhead.net`
+2. Go to **Channels** → **Create New Channel**
+3. Select **Squarespace**
+4. Paste your API key into the "Access token" field
+5. Click **Save**
+
+**Step 5: Watch your books sync from your point-of-sale to Squarespace!**
+
+Your products will be queued up to sync to Squarespace, and will start syncing within the hour. This initial upload will include a lot of products, so this will take a long time!
+
+Email support@bookhead.net to let us know you've connected Squarespace. We'll verify everything works as expected.
+
+### What Happens After Connection
+
+- Bookhead will start syncing your inventory from your point-of-sale to Squarespace
+- Updates happen automatically within 15 minutes of changes in your local inventory
+- Each book edition becomes a Squarespace product
+- Different conditions (New, Used, etc.) become product variants
+
+### Processing Orders from Squarespace
+
+When a customer places an order on your Squarespace website:
+
+1. **You'll receive the order notification from Squarespace** (via email or your Squarespace dashboard)
+2. **Process the order in your point-of-sale system** just like you normally would for in-store sales
+3. **Mark the order as fulfilled in Squarespace** once you've shipped it
+4. **Bookhead automatically updates your inventory** when your point-of-sale processes the sale
+
+**Important:** Continue using your normal fulfillment workflow. Bookhead keeps your inventory in sync but doesn't handle order processing - that stays between you, your point-of-sale, and Squarespace.
+
+## Shopify
+
+**Status:** Beta - Available for testing, full launch coming soon
+
+Bookhead can sync your inventory to your Shopify store. The integration works the same way as Squarespace: automatic inventory sync from your point-of-sale to your Shopify products.
+
+### Early Access
+
+We're currently testing Shopify integration with beta users before our official app store launch. If you'd like early access:
+
+1. Email support@bookhead.net with "Shopify Beta" in the subject line
+2. We'll set you up manually and work with you to ensure everything runs smoothly
+3. Your feedback helps us improve the integration before the public launch
+
+### Requirements
+
+- Shopify Basic plan or higher
+- Store Administrator access
+
+### Coming Soon
+
+- Official Shopify App Store listing
+- Self-service setup (no need to email us)
+- Enhanced product variant handling
+
+*Interested in Shopify? Email support@bookhead.net. We'd love to have you as a beta tester!*
 
 ## Transforming your inventory data so it works on different channels
 Bookhead stores your inventory securely in our database. We format this data into what is known as a "data model." Similarly, each channel has its own unique, internal data model. [You can read a deeper explanation about our data model here](./inventory.md#bookheads-data-model), but importantly for this documentation about the **channels** feature, your inventory data is stored in Bookhead's database like this:
