@@ -16,7 +16,7 @@ We support these e-commerce platforms and marketplaces:
 
 ## Squarespace
 
-Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy changes in your local inventory, Bookhead will update the Squarespace inventory within 15 minutes.
+Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy changes in your local inventory, Bookhead updates the Squarespace inventory within 15 minutes.
 
 ### Requirements
 
@@ -33,7 +33,7 @@ Bookhead can list your books for sale on your Squarespace website. If you have a
 **Step 1: Navigate to Developer API Keys in Squarespace**
 
 1. Log into your Squarespace account
-2. Go to **Settings** → **Advanced** → **Developer API Keys**
+2. Go to **Settings** → **Developer Tools** → **Developer API Keys**
 
 Need help? [Squarespace's API key documentation →](https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys)
 
@@ -74,13 +74,6 @@ Your products will be queued up to sync to Squarespace, and will start syncing w
 
 Email support@bookhead.net to let us know you've connected Squarespace. We'll verify everything works as expected.
 
-### What Happens After Connection
-
-- Bookhead will start syncing your inventory from your point-of-sale to Squarespace
-- Updates happen automatically within 15 minutes of changes in your local inventory
-- Each book edition becomes a Squarespace product
-- Different conditions (New, Used, etc.) become product variants
-
 ### Processing Orders from Squarespace
 
 When a customer places an order on your Squarespace website:
@@ -94,7 +87,7 @@ When a customer places an order on your Squarespace website:
 
 ## Shopify
 
-**Status:** Beta - Available for testing, full launch coming soon
+**Status:** Beta. Available for testing, full launch coming soon
 
 Bookhead can sync your inventory to your Shopify store. The integration works the same way as Squarespace: automatic inventory sync from your point-of-sale to your Shopify products.
 
@@ -105,17 +98,6 @@ We're currently testing Shopify integration with beta users before our official 
 1. Email support@bookhead.net with "Shopify Beta" in the subject line
 2. We'll set you up manually and work with you to ensure everything runs smoothly
 3. Your feedback helps us improve the integration before the public launch
-
-### Requirements
-
-- Shopify Basic plan or higher
-- Store Administrator access
-
-### Coming Soon
-
-- Official Shopify App Store listing
-- Self-service setup (no need to email us)
-- Enhanced product variant handling
 
 *Interested in Shopify? Email support@bookhead.net. We'd love to have you as a beta tester!*
 
