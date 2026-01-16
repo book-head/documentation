@@ -5,7 +5,7 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Bookhead Documentation',
-  tagline: 'Software for independent bookstores',
+  tagline: 'Sync your bookstore inventory to Squarespace, Shopify, eBay, and more',
   favicon: 'img/bookhead-single.png',
 
   // Set the production url of your site here
@@ -75,11 +75,36 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Documentation',
+                label: 'Overview',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Integrations',
+                to: '/docs/integrations',
+              },
+              {
+                label: 'Managing inventory',
+                to: '/docs/inventory',
+              },
+              {
+                label: 'Selling on channels',
+                to: '/docs/channels',
+              },
+            ],
+          },
+          {
+            title: 'Features',
+            items: [
+              {
+                label: 'Collections & staff picks',
+                to: '/docs/collections',
+              },
+              {
+                label: 'FTP integration',
+                to: '/docs/ftp-integration',
               },
             ],
           },
@@ -97,7 +122,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Bookhead. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Bookhead.`,
       },
       // prism: {
       //   theme: lightCodeTheme,
