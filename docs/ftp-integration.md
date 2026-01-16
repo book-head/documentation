@@ -4,14 +4,14 @@ Bookhead accepts inventory files via secure FTP upload. Upload your CSV file, an
 
 ## Two ways to upload
 
-1. **Automated uploads**: Your POS system uploads files automatically
+1. **Automated uploads**: Your point-of-sale system uploads files automatically
 2. **Manual uploads**: You upload files yourself using an FTP client
 
 Both methods use the same secure server and file processing.
 
 ---
 
-## For POS Vendors
+## For point-of-sale Vendors
 
 ### Connection details
 - **Host**: files.bookhead.net
@@ -50,15 +50,15 @@ inventory.csv
 
 ## For Bookstores
 
-### Getting gtarted
+### Getting started
 1. **Contact us** at support@bookhead.net to get your FTP credentials
 2. **Prepare your inventory** as a CSV file (see format below)
-3. **Upload your file** using an FTP client or ask your POS provider to set up automatic uploads
+3. **Upload your file** using an FTP client or ask your point-of-sale provider to set up automatic uploads
 
-### POS integration status
-Bookhead works with any POS system that can export inventory via FTP. We can typically add support for a new POS provider within a few days of receiving sample data.
+### point-of-sale integration status
+Bookhead works with any point-of-sale system that can export inventory via FTP. We can typically add support for a new point-of-sale provider within a few days of receiving sample data.
 
-**Want to be an early adopter?** We're looking for bookstores to pilot integrations with their POS systems. [Email support@bookhead.net](mailto:support@bookhead.net) to discuss your POS setup.
+**Want to be an early adopter?** We're looking for bookstores to pilot integrations with their point-of-sale systems. [Email support@bookhead.net](mailto:support@bookhead.net) to discuss your point-of-sale setup.
 
 ### Manual upload with FTP clients
 
@@ -146,7 +146,7 @@ isbn,quantity,price,notes
 
 Email support@bookhead.net for:
 - FTP credentials setup
-- POS integration questions
+- point-of-sale integration questions
 - File format assistance
 - Technical troubleshooting
 

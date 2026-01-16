@@ -14,44 +14,115 @@ Bookhead can create a book product enriched by an automatic bibliographic creati
 
 You can create books three different ways:
 
-### 1. Automatically via FTP
-We have an FTP server that can accept files automatically from your point of sales provider. Contact support@bookhead.net to set this up, because it requires coordination with your point of sales provider.
+### 1. Automatically via FTP (recommended)
 
-Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety formats. Our system is designed so it's easy for us to add a new customer or point of sales.
+We have an FTP server that can accept files automatically from your point-of-sale provider. This is the recommended approach for keeping your inventory in sync. Contact support@bookhead.net to set this up, because it requires coordination with your point-of-sale provider.
+
+#### Supported point-of-sale systems
+
+We currently support automatic syncing with:
+
+| Point-of-sale | Sync Method | Frequency |
+|---------------|-------------|-----------|
+| **Booklog** | Automatic FTP | Every 30 minutes |
+| **IBID** | Automatic FTP | Every hour |
+| **Basil** | Manual file upload | On demand |
+
+**Note:** Basil doesn't support automatic exports, so you'll need to export your inventory from Basil and upload it to Bookhead manually. See [Upload a file via the admin](#2-upload-a-file-via-the-admin) below.
+
+Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety of formats. Our system is designed so it's easy for us to add a new customer or point-of-sale.
+
+#### How the sync works
+
+1. **Your point-of-sale exports inventory** - Your point-of-sale system automatically sends an inventory file to our FTP server
+2. **Bookhead processes the file** - We parse the file and update our database with any changes (new books, price updates, quantity changes, deleted items)
+3. **Changes sync to channels** - Inventory changes are pushed to your connected sales channels (Squarespace, Shopify, etc.)
+
+**What gets synced:**
+- New books added to your inventory
+- Price changes
+- Quantity changes (including when items sell)
+- Books removed from inventory
+
+**Don't see your point-of-sale listed?** Email support@bookhead.net. We can often add support for new systems quickly.
 
 For detailed setup instructions, see our [FTP Integration Guide](ftp-integration.md).
 
 
 ### 2. Upload a file via the admin
-Visit `https://<store>.bookhead.net/staff/books/import/` to upload a file.
 
-The file must be a CSV file type, and the file is required to have these column names:
-- `isbn`
-- `quantity`
-- `price`
+If you can't use automatic FTP syncing, you can manually upload inventory files through the admin interface.
 
-We can accept these additional, optional fields:
-- `sku`
-- `ean`
-- `cost`
-- `first_edition`
-    - can be `True` or `False`. Defaults to `False`
-- `signed`
-    - can be `True` or `False`. Defaults to `False`
-- `advanced_reader_copy`
-    - can be `True` or `False`. Defaults to `False`
-- `notes`
-    - text field about the copy's condition or anything notable
-- `book_condition`
-    - choices:  `as-new`, `fine`, `very-good`, `good`, `fair`, `poor`
-- `jacket_condition`
-    - choices:  `as-new`, `fine`, `very-good`, `good`, `fair`, `poor`
+**To upload an inventory file:**
+
+1. Go to `https://<store>.bookhead.net/staff/books/import/`
+2. Click **Choose file** and select your CSV file
+3. Click **Upload**
+4. Bookhead will process your file and show you the results
+
+**What happens during import:**
+
+- **New ISBNs** are looked up and created with bibliographic data (cover, description, etc.)
+- **Existing ISBNs** are updated with the new price/quantity
+- **Invalid ISBNs** are flagged so you can fix them
+- You'll see a summary of what was created, updated, and any errors
+
+#### Required fields
+
+Your CSV file must have these columns:
+
+| Column | Description |
+|--------|-------------|
+| `isbn` | The book's ISBN (10 or 13 digit) |
+| `quantity` | How many copies you have |
+| `price` | Your selling price |
+
+#### Optional fields
+
+You can also include these columns:
+
+| Column | Description | Values |
+|--------|-------------|--------|
+| `sku` | Your internal product ID | Any text |
+| `ean` | EAN barcode | Number |
+| `cost` | Your cost for the item | Number |
+| `book_condition` | Condition of the book | `as-new`, `fine`, `very-good`, `good`, `fair`, `poor` |
+| `jacket_condition` | Condition of dust jacket | `as-new`, `fine`, `very-good`, `good`, `fair`, `poor` |
+| `first_edition` | Is it a first edition? | `True` or `False` |
+| `signed` | Is it signed? | `True` or `False` |
+| `advanced_reader_copy` | Is it an ARC? | `True` or `False` |
+| `notes` | Notes about this copy | Any text |
 
 
 ### 3. Manually in the admin
-Visit `https://<store>.bookhead.net/staff/books/new/` and you can use the form to create a new book. 
 
-You can search bibliographic data by ISBN or title. The ISBN search has better bibliographic data. The title search uses data from Open Library, which can be handy when your edition predates ISBNs (also, this search doesn't always return complete data, but it can still be helpful for filling out some basics of your title).
+Sometimes you need to add a book that isn't in your point-of-sale yet, or create a listing for a special item. You can do this directly in Bookhead.
+
+**To create a new book:**
+
+1. Go to your staff dashboard: `https://<store>.bookhead.net/staff/`
+2. Click **New book** (or go directly to `/staff/books/new/`)
+3. Search for the book by **ISBN** (recommended) or **title**
+4. Select the correct edition from the search results
+5. Fill in the copy details:
+   - **Price**: Your selling price
+   - **Quantity**: How many you have
+   - **Condition**: Book and jacket condition
+   - **Notes**: Any special details (signed, first edition, etc.)
+6. Click **Save**
+
+**Search tips:**
+
+- **ISBN search** gives the best results - we pull detailed bibliographic data including cover images
+- **Title search** uses Open Library data, which is helpful for older books that predate ISBNs
+- If a book isn't found, you can create it manually by entering the bibliographic details yourself
+
+**When to use manual creation:**
+
+- Adding a rare or unique item not in your point-of-sale
+- Creating listings for items your point-of-sale doesn't track (signed editions, ARCs)
+- Testing a new listing before adding it to your point-of-sale
+- Adding books while your point-of-sale sync is being set up
 
 ## About Bookhead's data model
 Our bibliographic data model drives everything about Bookhead. Within the context of storing bibliographic metadata about your inventory in a database, a *book* doesn't exactly describe the object you're trying to sell. Instead, a "work" can have multiple "editions", and each edition can have unique "copies" with altering attributes. Solving this bibliographic data problem has a long history in library science, so we created a bibliographic data model inspired by [the Open Library's database design](https://openlibrary.org/dev/docs/api/books) and [Functional Requirements for Bibliographic Records](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). We applied our own take that is simple for the needs of online book retail. This is still a work in progress as we continually encounter new sources of bibliographic data and prioritize missing parts (for example, we currently don't support BISAC codes because it's not been a priority, but it would be easy to add once a new data source or customer requires this). We've found this data model has been reliable and flexible to change as this application has evolved over time.

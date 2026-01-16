@@ -4,29 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Inventory sync',
+    title: 'Point-of-sale integrations',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Bookhead automatically syncs your inventory to your e-commerce store behind the scenes while you focus on selling books.
+        Connect your point-of-sale system (Booklog, IBID, Basil) and let Bookhead automatically sync your inventory.
       </>
     ),
   },
   {
-    title: 'Choose your own platform',
+    title: 'Sell on multiple channels',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Bookhead allows you to use the software you want.
+        List your books on Squarespace, Shopify, eBay, and Biblio. Inventory stays in sync across all platforms.
       </>
     ),
   },
   {
-    title: 'Support',
+    title: 'Rich book data',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Reach out to <a href="mailto:support@bookhead.net"><strong>support@bookhead.net</strong></a> for help.
+        Bookhead enriches your listings with cover images, descriptions, and bibliographic metadata automatically.
       </>
     ),
   },
