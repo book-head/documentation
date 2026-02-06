@@ -26,6 +26,7 @@ We currently support automatic syncing with:
 |---------------|-------------|-----------|
 | **Booklog** | Automatic FTP | Every 30 minutes |
 | **IBID** | Automatic FTP | Every hour |
+| **iMrchnt** | Automatic FTP | Every hour |
 | **Basil** | Manual file upload | On demand |
 
 **Note:** Basil doesn't support automatic exports, so you'll need to export your inventory from Basil and upload it to Bookhead manually. See [Upload a file via the admin](#2-upload-a-file-via-the-admin) below.
