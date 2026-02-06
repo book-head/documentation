@@ -14,9 +14,9 @@ Bookhead can create a book product enriched by an automatic bibliographic creati
 
 You can create books three different ways:
 
-### 1. Automatically via FTP (recommended)
+### 1. Automatically via SFTP (recommended)
 
-We have an FTP server that can accept files automatically from your point-of-sale provider. This is the recommended approach for keeping your inventory in sync. Contact support@bookhead.net to set this up, because it requires coordination with your point-of-sale provider.
+We have a secure SFTP server that can accept files automatically from your point-of-sale provider. This is the recommended approach for keeping your inventory in sync. Contact support@bookhead.net to set this up, because it requires coordination with your point-of-sale provider.
 
 #### Supported point-of-sale systems
 
@@ -24,8 +24,9 @@ We currently support automatic syncing with:
 
 | Point-of-sale | Sync Method | Frequency |
 |---------------|-------------|-----------|
-| **Booklog** | Automatic FTP | Every 30 minutes |
-| **IBID** | Automatic FTP | Every hour |
+| **Booklog** | Automatic SFTP | Every 30 minutes |
+| **IBID** | Automatic SFTP | Every hour |
+| **iMrchnt** | Automatic SFTP | Every hour |
 | **Basil** | Manual file upload | On demand |
 
 **Note:** Basil doesn't support automatic exports, so you'll need to export your inventory from Basil and upload it to Bookhead manually. See [Upload a file via the admin](#2-upload-a-file-via-the-admin) below.
@@ -34,7 +35,7 @@ Each data source has a slightly different way of doing things, like with differe
 
 #### How the sync works
 
-1. **Your point-of-sale exports inventory** - Your point-of-sale system automatically sends an inventory file to our FTP server
+1. **Your point-of-sale exports inventory** - Your point-of-sale system automatically sends an inventory file to our secure SFTP server
 2. **Bookhead processes the file** - We parse the file and update our database with any changes (new books, price updates, quantity changes, deleted items)
 3. **Changes sync to channels** - Inventory changes are pushed to your connected sales channels (Squarespace, Shopify, etc.)
 
@@ -46,7 +47,7 @@ Each data source has a slightly different way of doing things, like with differe
 
 **Don't see your point-of-sale listed?** Email support@bookhead.net. We can often add support for new systems quickly.
 
-For detailed setup instructions, see our [FTP Integration Guide](ftp-integration.md).
+For detailed setup instructions, see our [SFTP Integration Guide](ftp-integration.md).
 
 
 ### 2. Upload a file via the admin
