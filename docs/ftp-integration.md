@@ -1,6 +1,6 @@
-# FTP Integration Guide for Inventory Uploads
+# SFTP Integration Guide for Inventory Uploads
 
-Bookhead accepts inventory files via secure FTP upload. Upload your CSV file, and we'll automatically process it and update your inventory within 15 minutes.
+Bookhead accepts inventory files via secure SFTP (SSH File Transfer Protocol) upload. Upload your CSV file, and we'll automatically process it and update your inventory within 15 minutes.
 
 ## Two ways to upload
 
@@ -22,7 +22,7 @@ Both methods use the same secure server and file processing.
 
 ### Integration process
 1. Contact support@bookhead.net with store details
-2. We provide unique FTP credentials for each store
+2. We provide unique SFTP credentials for each store
 3. Configure automated uploads to the store's directory
 4. Files process instantly  (see [file processing](#file-processing) below)
 
@@ -51,18 +51,18 @@ inventory.csv
 ## For Bookstores
 
 ### Getting started
-1. **Contact us** at support@bookhead.net to get your FTP credentials
+1. **Contact us** at support@bookhead.net to get your SFTP credentials
 2. **Prepare your inventory** as a CSV file (see format below)
-3. **Upload your file** using an FTP client or ask your point-of-sale provider to set up automatic uploads
+3. **Upload your file** using an SFTP client or ask your point-of-sale provider to set up automatic uploads
 
 ### point-of-sale integration status
-Bookhead works with any point-of-sale system that can export inventory via FTP. We can typically add support for a new point-of-sale provider within a few days of receiving sample data.
+Bookhead works with any point-of-sale system that can export inventory via SFTP. We can typically add support for a new point-of-sale provider within a few days of receiving sample data.
 
 **Want to be an early adopter?** We're looking for bookstores to pilot integrations with their point-of-sale systems. [Email support@bookhead.net](mailto:support@bookhead.net) to discuss your point-of-sale setup.
 
-### Manual upload with FTP clients
+### Manual upload with SFTP clients
 
-If you manage your inventory in a spreadsheet, already sell on Biblio, or prefer to upload files yourself, you can use free FTP software:
+If you manage your inventory in a spreadsheet, already sell on Biblio, or prefer to upload files yourself, you can use free SFTP software:
 
 **Setup example with FileZilla:**
 1. Download FileZilla from [filezilla-project.org](https://filezilla-project.org)
@@ -111,7 +111,7 @@ isbn,quantity,price,notes
 9780141439518,1,15.99,"Test upload"
 ```
 
-1. Upload via FTP
+1. Upload via SFTP
 2. Check your Bookhead admin (see [file processing](#file-processing) below)
 3. Verify the book appears in your inventory
 
@@ -130,7 +130,7 @@ isbn,quantity,price,notes
 
 **Can't connect?**
 - Verify host: files.bookhead.net
-- Check port: 22 (SFTP, not regular FTP)
+- Check port: 22 (SFTP/SSH, not port 21 FTP)
 - Confirm your username and password
 
 **File not processing?**
@@ -145,7 +145,7 @@ isbn,quantity,price,notes
 ## Support
 
 Email support@bookhead.net for:
-- FTP credentials setup
+- SFTP credentials setup
 - point-of-sale integration questions
 - File format assistance
 - Technical troubleshooting
