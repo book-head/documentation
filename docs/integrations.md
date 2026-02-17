@@ -4,13 +4,13 @@ sidebar_position: 5
 
 # Integrations
 
-Bookhead connects your point-of-sale system to multiple sales channels. Here's what we integrate with and how each one works.
+Bookhead connects your bookstore system to multiple sales channels. Here's what we integrate with and how each one works.
 
-## Point-of-sale systems
+## Bookstore systems
 
 ### Booklog
 
-Booklog is a point-of-sale system designed specifically for independent bookstores.
+Booklog is a management system designed specifically for independent bookstores.
 
 | | |
 |--|--|
@@ -22,7 +22,7 @@ Booklog automatically exports your full inventory to Bookhead's FTP server. When
 
 ### IBID
 
-IBID is a point-of-sale system for independent bookstores.
+IBID is a management system for independent bookstores.
 
 | | |
 |--|--|
@@ -48,9 +48,9 @@ Basil doesn't support automatic exports, so you'll need to:
 
 We recommend uploading at least once a week, or whenever you have significant inventory changes.
 
-### Other point-of-sale systems
+### Other bookstore systems
 
-Don't see your point-of-sale listed? Email support@bookhead.net. We can often add support for new systems within a few days of receiving sample data.
+Don't see your bookstore system listed? Email support@bookhead.net. We can often add support for new systems within a few days of receiving sample data.
 
 ---
 
@@ -66,7 +66,7 @@ Squarespace is a website builder with e-commerce features.
 | **What syncs** | Products, inventory, prices, tags |
 | **Limitations** | Categories must be set via CSV import (API doesn't support categories) |
 
-**How it works:** Bookhead creates and updates products on your Squarespace store automatically. When inventory changes in your point-of-sale, Bookhead updates the Squarespace listing within 30 minutes.
+**How it works:** Bookhead creates and updates products on your Squarespace store automatically. When inventory changes in your bookstore, Bookhead updates the Squarespace listing within 30 minutes.
 
 **Good to know:**
 - Product categories can't be set via API - you'll need to [import them via CSV](/docs/channels#importing-categories-to-squarespace)

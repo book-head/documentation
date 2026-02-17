@@ -78,7 +78,7 @@ It's easy to confuse collections and categories. Here's the difference:
 | | Collections | Categories |
 |--|-------------|------------|
 | **What they are** | Curated lists of specific books | Organizational groupings based on genre/type |
-| **How they're created** | You manually add books | Books are automatically included based on their point-of-sale category code |
+| **How they're created** | You manually add books | Books are automatically included based on their bookstore category code |
 | **Use case** | "Staff Picks", "Holiday Gifts" | "Fiction", "History", "Children's Books" |
 | **Syncs to** | Shopify (as Custom Collections) | Shopify and Squarespace (as tags/categories) |
 

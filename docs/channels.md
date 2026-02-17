@@ -16,7 +16,7 @@ We support these e-commerce platforms and marketplaces:
 
 ## Squarespace
 
-Bookhead can list your books for sale on your Squarespace website. If you have a point of sales connection, Bookhead automatically syncs your point of sales inventory with the product listings on your Squarespace website. Whenever a copy changes in your local inventory, Bookhead updates the Squarespace inventory within 15 minutes.
+Bookhead can list your books for sale on your Squarespace website. If you have a bookstore system connection, Bookhead automatically syncs your bookstore inventory with the product listings on your Squarespace website. Whenever a copy changes in your local inventory, Bookhead updates the Squarespace inventory within 15 minutes.
 
 ### Requirements
 
@@ -68,7 +68,7 @@ Need help? [Squarespace's API key documentation →](https://support.squarespace
 4. Paste your API key into the "Access token" field
 5. Click **Save**
 
-**Step 5: Watch your books sync from your point-of-sale to Squarespace!**
+**Step 5: Watch your books sync to Squarespace!**
 
 Your products will be queued up to sync to Squarespace, and will start syncing within the hour. This initial upload will include a lot of products, so this will take a long time!
 
@@ -79,17 +79,17 @@ Email support@bookhead.net to let us know you've connected Squarespace. We'll ve
 When a customer places an order on your Squarespace website:
 
 1. **You'll receive the order notification from Squarespace** (via email or your Squarespace dashboard)
-2. **Process the order in your point-of-sale system** just like you normally would for in-store sales
+2. **Process the order in your bookstore system** just like you normally would for in-store sales
 3. **Mark the order as fulfilled in Squarespace** once you've shipped it
-4. **Bookhead automatically updates your inventory** when your point-of-sale processes the sale
+4. **Bookhead automatically updates your inventory** when your bookstore system processes the sale
 
-**Important:** Continue using your normal fulfillment workflow. Bookhead keeps your inventory in sync but doesn't handle order processing - that stays between you, your point-of-sale, and Squarespace.
+**Important:** Continue using your normal fulfillment workflow. Bookhead keeps your inventory in sync but doesn't handle order processing — that stays between you, your bookstore system, and Squarespace.
 
 ## Shopify
 
 **Status:** Beta. Available for testing, full launch coming soon
 
-Bookhead can sync your inventory to your Shopify store. The integration works the same way as Squarespace: automatic inventory sync from your point-of-sale to your Shopify products.
+Bookhead can sync your inventory to your Shopify store. The integration works the same way as Squarespace: automatic inventory sync from your bookstore to your Shopify products.
 
 ### Early Access
 
@@ -127,12 +127,12 @@ Product (Edition level)
 
 ### Managing product categories
 
-Bookhead helps you organize your products into categories for your online store. Your point-of-sale system uses category codes (like "FM" for Fiction-Mystery), and Bookhead lets you map these to customer-friendly display categories (like "Fiction" or "Mystery"). This works for both Squarespace and Shopify.
+Bookhead helps you organize your products into categories for your online store. Your bookstore system uses category codes (like "FM" for Fiction-Mystery), and Bookhead lets you map these to customer-friendly display categories (like "Fiction" or "Mystery"). This works for both Squarespace and Shopify.
 
 **How it works:**
 
 1. **Display categories** are the broad groupings customers see on your website (e.g., "Fiction", "History", "Children's Books")
-2. **Store categories** are the codes from your point-of-sale system
+2. **Store categories** are the codes from your bookstore system
 3. You map store categories to display categories in Bookhead
 4. When you export to Squarespace, products get tagged with both the display category and the store category name
 
@@ -148,13 +148,13 @@ Bookhead helps you organize your products into categories for your online store.
 **Step 2: Map your store categories**
 
 1. Go to **Categories** → **Mappings**
-2. You'll see all your point-of-sale category codes
+2. You'll see all your bookstore category codes
 3. For each code, select a display category from the dropdown
 4. The mapping saves automatically
 
 **Step 3: (Optional) Edit category names**
 
-Your point-of-sale category names might look ugly (like "FICTION-MYSTERY/DETECTIVE"). You can give them friendlier names:
+Your bookstore category names might look ugly (like "FICTION-MYSTERY/DETECTIVE"). You can give them friendlier names:
 
 1. In the mappings view, click **edit** next to any category name
 2. Enter a friendlier name like "Mystery & Detective"

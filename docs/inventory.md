@@ -16,13 +16,13 @@ You can create books three different ways:
 
 ### 1. Automatically via SFTP (recommended)
 
-We have a secure SFTP server that can accept files automatically from your point-of-sale provider. This is the recommended approach for keeping your inventory in sync. Contact support@bookhead.net to set this up, because it requires coordination with your point-of-sale provider.
+We have a secure SFTP server that can accept files automatically from your bookstore software provider. This is the recommended approach for keeping your inventory in sync. Contact support@bookhead.net to set this up, because it requires coordination with your bookstore software provider.
 
-#### Supported point-of-sale systems
+#### Supported bookstore systems
 
 We currently support automatic syncing with:
 
-| Point-of-sale | Sync Method | Frequency |
+| Bookstore system | Sync Method | Frequency |
 |---------------|-------------|-----------|
 | **Booklog** | Automatic SFTP | Every 30 minutes |
 | **IBID** | Automatic SFTP | Every hour |
@@ -31,11 +31,11 @@ We currently support automatic syncing with:
 
 **Note:** Basil doesn't support automatic exports, so you'll need to export your inventory from Basil and upload it to Bookhead manually. See [Upload a file via the admin](#2-upload-a-file-via-the-admin) below.
 
-Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety of formats. Our system is designed so it's easy for us to add a new customer or point-of-sale.
+Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety of formats. Our system is designed so it's easy for us to add a new customer or bookstore system.
 
 #### How the sync works
 
-1. **Your point-of-sale exports inventory** - Your point-of-sale system automatically sends an inventory file to our secure SFTP server
+1. **Your bookstore exports inventory** - Your bookstore system automatically sends an inventory file to our secure SFTP server
 2. **Bookhead processes the file** - We parse the file and update our database with any changes (new books, price updates, quantity changes, deleted items)
 3. **Changes sync to channels** - Inventory changes are pushed to your connected sales channels (Squarespace, Shopify, etc.)
 
@@ -45,7 +45,7 @@ Each data source has a slightly different way of doing things, like with differe
 - Quantity changes (including when items sell)
 - Books removed from inventory
 
-**Don't see your point-of-sale listed?** Email support@bookhead.net. We can often add support for new systems quickly.
+**Don't see your bookstore system listed?** Email support@bookhead.net. We can often add support for new systems quickly.
 
 For detailed setup instructions, see our [SFTP Integration Guide](ftp-integration.md).
 
@@ -97,7 +97,7 @@ You can also include these columns:
 
 ### 3. Manually in the admin
 
-Sometimes you need to add a book that isn't in your point-of-sale yet, or create a listing for a special item. You can do this directly in Bookhead.
+Sometimes you need to add a book that isn't in your bookstore system yet, or create a listing for a special item. You can do this directly in Bookhead.
 
 **To create a new book:**
 
@@ -120,10 +120,10 @@ Sometimes you need to add a book that isn't in your point-of-sale yet, or create
 
 **When to use manual creation:**
 
-- Adding a rare or unique item not in your point-of-sale
-- Creating listings for items your point-of-sale doesn't track (signed editions, ARCs)
-- Testing a new listing before adding it to your point-of-sale
-- Adding books while your point-of-sale sync is being set up
+- Adding a rare or unique item not in your bookstore system
+- Creating listings for items your bookstore system doesn't track (signed editions, ARCs)
+- Testing a new listing before adding it to your bookstore system
+- Adding books while your bookstore sync is being set up
 
 ## About Bookhead's data model
 Our bibliographic data model drives everything about Bookhead. Within the context of storing bibliographic metadata about your inventory in a database, a *book* doesn't exactly describe the object you're trying to sell. Instead, a "work" can have multiple "editions", and each edition can have unique "copies" with altering attributes. Solving this bibliographic data problem has a long history in library science, so we created a bibliographic data model inspired by [the Open Library's database design](https://openlibrary.org/dev/docs/api/books) and [Functional Requirements for Bibliographic Records](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). We applied our own take that is simple for the needs of online book retail. This is still a work in progress as we continually encounter new sources of bibliographic data and prioritize missing parts (for example, we currently don't support BISAC codes because it's not been a priority, but it would be easy to add once a new data source or customer requires this). We've found this data model has been reliable and flexible to change as this application has evolved over time.

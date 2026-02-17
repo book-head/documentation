@@ -4,11 +4,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Point-of-sale integrations',
+    title: 'Bookstore software integrations',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Connect your point-of-sale system (Booklog, IBID, Basil) and let Bookhead automatically sync your inventory.
+        Connect your bookstore system (Booklog, IBID, Basil) and let Bookhead automatically sync your inventory.
       </>
     ),
   },

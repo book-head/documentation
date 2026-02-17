@@ -4,14 +4,14 @@ Bookhead accepts inventory files via secure SFTP (SSH File Transfer Protocol) up
 
 ## Two ways to upload
 
-1. **Automated uploads**: Your point-of-sale system uploads files automatically
+1. **Automated uploads**: Your bookstore system uploads files automatically
 2. **Manual uploads**: You upload files yourself using an FTP client
 
 Both methods use the same secure server and file processing.
 
 ---
 
-## For point-of-sale Vendors
+## For Bookstore Software Vendors
 
 ### Connection details
 - **Host**: files.bookhead.net
@@ -53,12 +53,12 @@ inventory.csv
 ### Getting started
 1. **Contact us** at support@bookhead.net to get your SFTP credentials
 2. **Prepare your inventory** as a CSV file (see format below)
-3. **Upload your file** using an SFTP client or ask your point-of-sale provider to set up automatic uploads
+3. **Upload your file** using an SFTP client or ask your bookstore software provider to set up automatic uploads
 
-### point-of-sale integration status
-Bookhead works with any point-of-sale system that can export inventory via SFTP. We can typically add support for a new point-of-sale provider within a few days of receiving sample data.
+### Bookstore system integration status
+Bookhead works with any bookstore system that can export inventory via SFTP. We can typically add support for a new bookstore system within a few days of receiving sample data.
 
-**Want to be an early adopter?** We're looking for bookstores to pilot integrations with their point-of-sale systems. [Email support@bookhead.net](mailto:support@bookhead.net) to discuss your point-of-sale setup.
+**Want to be an early adopter?** We're looking for bookstores to pilot integrations with their bookstore systems. [Email support@bookhead.net](mailto:support@bookhead.net) to discuss your setup.
 
 ### Manual upload with SFTP clients
 
@@ -146,7 +146,7 @@ isbn,quantity,price,notes
 
 Email support@bookhead.net for:
 - SFTP credentials setup
-- point-of-sale integration questions
+- Bookstore system integration questions
 - File format assistance
 - Technical troubleshooting
 
