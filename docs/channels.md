@@ -235,8 +235,31 @@ Access any metafield in Liquid with:
 {% endif %}
 ```
 
+### Theme App Extension: drag-and-drop blocks
+
+The Bookhead app includes a **Theme App Extension** with ready-to-use blocks that merchants can add to any product page via the Shopify theme editor — no code required.
+
+To add blocks: go to **Online Store → Themes → Customize**, navigate to a product page, and click **Add block**. Bookhead blocks appear under the **Apps** section.
+
+#### Available blocks
+
+| Block | Description | Key settings |
+|-------|-------------|--------------|
+| **Book Title** | Work title as a heading | Heading level (H1–H3), font size, weight, color |
+| **Book Author** | Author names with prefix | Prefix text ("by "), font size, color |
+| **Book Edition** | Publisher, year, format summary | Font size, color |
+| **Book ISBN** | ISBN with label | Label text, font size, color |
+| **Book Condition** | Book and jacket condition | Show/hide jacket, label text |
+| **Book Description** | Synopsis with optional heading | Heading text, font size |
+| **Book Badges** | Staff Pick / Signed / First Edition pills | Label text, colors per badge type |
+| **Staff Pick Quote** | Blockquote with reviewer attribution | Accent color, background, label text |
+| **Bookseller Notes** | Bookseller's notes with heading | Italic/normal style, heading text |
+| **Book Info** | All-in-one card with everything above | Toggle each section on/off |
+
+Each block is independently placeable and fully customizable (colors, font sizes, spacing, labels). Place them anywhere in your product page layout — put the title at the top, badges under the price, staff pick quote in the sidebar, etc.
+
 :::tip
-To make metafields available in the Shopify theme editor, you need to create **metafield definitions** in Shopify Admin under **Settings → Custom data → Products**. Create definitions for each `book_info.*` key with the matching type. This lets merchants use metafields in the theme customizer without editing code.
+Blocks only render when the product has the corresponding metafield data from Bookhead. If a product doesn't have a staff pick review, the Staff Pick blocks simply won't appear.
 :::
 
 ## Transforming your inventory data so it works on different channels
