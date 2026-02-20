@@ -101,6 +101,144 @@ We're currently testing Shopify integration with beta users before our official 
 
 *Interested in Shopify? Email support@bookhead.net. We'd love to have you as a beta tester!*
 
+### How your inventory is transformed to Shopify products
+
+Each `Edition` becomes a Shopify product, and each `Copy` of that edition becomes a variant. The variant uses a **Condition** option (e.g., "Very Good", "Fine") so customers can see the book's condition. Copy-specific images (condition photos, signature pages, etc.) are assigned to the variant, while the edition cover image is shared at the product level.
+
+```
+Product (one per Edition)
+- Title: Work title
+- Vendor: Publisher name
+- Product type: "Books"
+- Product category: "Print Books" (Shopify standard taxonomy — enables tax rates, Google Shopping)
+- Description: Synopsis, staff picks, edition details
+- Tags: Controlled by tag settings (categories, publisher)
+- Option: "Condition" (New, Fine, Very Good, Good, Fair, Poor)
+└── Variant (one per Copy)
+    - SKU: Copy SKU
+    - Price: Copy price
+    - Condition: Copy book condition
+    - Images: Copy-specific photos (assigned to variant)
+```
+
+Tags are controlled by the channel's tag settings and only include what you enable — publisher name, display categories, and/or store categories. A `bookhead` tag is always included for identification.
+
+### Metafields for Liquid themes
+
+Bookhead syncs rich book metadata to Shopify as **metafields** under the `book_info` namespace. Theme designers can use these in Liquid templates to build custom product pages without parsing the product description.
+
+Access any metafield in Liquid with:
+
+```liquid
+{{ product.metafields.book_info.authors }}
+```
+
+#### Data mapping: Bookhead to Shopify metafields
+
+| Metafield key | Shopify type | Bookhead source | Description |
+|---|---|---|---|
+| `work_id` | `single_line_text_field` | Work ID | Internal Work ID, used for "Other Editions" grouping |
+| `work_title` | `single_line_text_field` | Work → title | Canonical title of the work |
+| `authors` | `single_line_text_field` | Work → authors | Comma-separated author names |
+| `subjects` | `single_line_text_field` | Work → subjects | Comma-separated subject names |
+| `edition_id` | `single_line_text_field` | Edition → uuid | Internal Edition UUID |
+| `edition_display` | `single_line_text_field` | Edition (computed) | "Publisher &bull; Year &bull; Format" summary string |
+| `isbn` | `single_line_text_field` | Edition → isbn | ISBN |
+| `publisher` | `single_line_text_field` | Edition → publisher | Publisher name |
+| `binding` | `single_line_text_field` | Edition → binding | Format: Hardcover, Paperback, etc. |
+| `pages` | `number_integer` | Edition → pages | Page count |
+| `publication_date` | `single_line_text_field` | Edition → publication_date | Publication date as stored |
+| `language` | `single_line_text_field` | Edition → language | ISO language code (e.g., "en") |
+| `synopsis` | `multi_line_text_field` | Edition → synopsis | Book synopsis/description (max 5000 chars) |
+| `dimensions` | `single_line_text_field` | Edition → dimensions | Physical dimensions |
+| `weight` | `single_line_text_field` | Edition → weight | Weight |
+| `msrp` | `single_line_text_field` | Edition → msrp | Manufacturer's suggested retail price |
+| `condition` | `single_line_text_field` | Copy → book_condition | Book condition display name (New, Fine, Very Good, etc.) |
+| `jacket_condition` | `single_line_text_field` | Copy → jacket_condition | Dust jacket condition display name |
+| `first_edition` | `boolean` | Copy → first_edition | `true` if this is a first edition |
+| `signed` | `boolean` | Copy → signed | `true` if this copy is signed |
+| `notes` | `multi_line_text_field` | Copy → notes | Bookseller notes about this copy (max 5000 chars) |
+| `collections` | `single_line_text_field` | Copy → BookLists | Comma-separated BookList names this copy belongs to |
+| `staff_pick` | `boolean` | Work → reviews | `true` if the work has a staff pick review |
+| `staff_pick_reviewer` | `single_line_text_field` | Review → display_reviewer | First staff pick reviewer's name |
+| `staff_pick_text` | `multi_line_text_field` | Review → text | First staff pick review text (max 5000 chars) |
+| `staff_picks_json` | `json` | Work → reviews | All staff picks as JSON array (when multiple reviews exist) |
+
+#### Example: using metafields in a Liquid theme
+
+```liquid
+{% comment %} Show book details on the product page {% endcomment %}
+
+<h1>{{ product.title }}</h1>
+<p class="authors">by {{ product.metafields.book_info.authors }}</p>
+
+{% if product.metafields.book_info.signed == true %}
+  <span class="badge">Signed Copy</span>
+{% endif %}
+
+{% if product.metafields.book_info.first_edition == true %}
+  <span class="badge">First Edition</span>
+{% endif %}
+
+<dl class="book-details">
+  <dt>Condition</dt>
+  <dd>{{ product.metafields.book_info.condition }}</dd>
+
+  {% if product.metafields.book_info.jacket_condition %}
+    <dt>Jacket</dt>
+    <dd>{{ product.metafields.book_info.jacket_condition }}</dd>
+  {% endif %}
+
+  <dt>ISBN</dt>
+  <dd>{{ product.metafields.book_info.isbn }}</dd>
+
+  <dt>Publisher</dt>
+  <dd>{{ product.metafields.book_info.publisher }}</dd>
+
+  {% if product.metafields.book_info.binding %}
+    <dt>Format</dt>
+    <dd>{{ product.metafields.book_info.binding }}</dd>
+  {% endif %}
+
+  {% if product.metafields.book_info.pages %}
+    <dt>Pages</dt>
+    <dd>{{ product.metafields.book_info.pages }}</dd>
+  {% endif %}
+
+  {% if product.metafields.book_info.publication_date %}
+    <dt>Published</dt>
+    <dd>{{ product.metafields.book_info.publication_date }}</dd>
+  {% endif %}
+</dl>
+
+{% if product.metafields.book_info.synopsis %}
+  <div class="synopsis">
+    {{ product.metafields.book_info.synopsis }}
+  </div>
+{% endif %}
+
+{% if product.metafields.book_info.notes %}
+  <div class="bookseller-notes">
+    <h3>Bookseller's Notes</h3>
+    {{ product.metafields.book_info.notes }}
+  </div>
+{% endif %}
+
+{% if product.metafields.book_info.staff_pick %}
+  <div class="staff-pick">
+    <h3>Staff Pick</h3>
+    <blockquote>
+      "{{ product.metafields.book_info.staff_pick_text }}"
+      <cite>— {{ product.metafields.book_info.staff_pick_reviewer }}</cite>
+    </blockquote>
+  </div>
+{% endif %}
+```
+
+:::tip
+To make metafields available in the Shopify theme editor, you need to create **metafield definitions** in Shopify Admin under **Settings → Custom data → Products**. Create definitions for each `book_info.*` key with the matching type. This lets merchants use metafields in the theme customizer without editing code.
+:::
+
 ## Transforming your inventory data so it works on different channels
 Bookhead stores your inventory securely in our database. We format this data into what is known as a "data model." Similarly, each channel has its own unique, internal data model. [You can read a deeper explanation about our data model here](./inventory.md#bookheads-data-model), but importantly for this documentation about the **channels** feature, your inventory data is stored in Bookhead's database like this:
 
