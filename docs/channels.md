@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Selling on channels
 
-**channels** is a Bookhead Connect feature that allows you to sell your books on multiple sales channels. Currently, we support selling books on **Squarespace**, **eBay**, and **Biblio**, and soon we'll support **Shopify**. This automatic inventory data syncing system keeps your bookstore's local store inventory up to date on all of your online sales channels.
+**channels** is a Bookhead Connect feature that allows you to sell your books on multiple sales channels. Currently, we support selling books on **Squarespace**, **Shopify**, **eBay**, and **Biblio**. This automatic inventory data syncing system keeps your bookstore's local store inventory up to date on all of your online sales channels.
 
 ### Supported platforms
 
@@ -87,19 +87,7 @@ When a customer places an order on your Squarespace website:
 
 ## Shopify
 
-**Status:** Beta. Available for testing, full launch coming soon
-
 Bookhead can sync your inventory to your Shopify store. The integration works the same way as Squarespace: automatic inventory sync from your bookstore to your Shopify products.
-
-### Early Access
-
-We're currently testing Shopify integration with beta users before our official app store launch. If you'd like early access:
-
-1. Email support@bookhead.net with "Shopify Beta" in the subject line
-2. We'll set you up manually and work with you to ensure everything runs smoothly
-3. Your feedback helps us improve the integration before the public launch
-
-*Interested in Shopify? Email support@bookhead.net. We'd love to have you as a beta tester!*
 
 ### How your inventory is transformed to Shopify products
 
