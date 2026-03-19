@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# ISBN Magic
+# ISBN Magic for Google Sheets
 
 ISBN Magic is a Google Sheets add-on that looks up bibliographic data for a list of ISBNs — title, authors, publisher, cover image, dimensions, and more — and writes the results directly into your spreadsheet.
 
