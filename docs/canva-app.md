@@ -41,14 +41,12 @@ Your file must have a header row with at minimum an `isbn` column. Column names 
 | Column | Required | Description |
 |---|---|---|
 | `isbn` | Yes | ISBN-10 or ISBN-13 of the book |
+| `reviewer` | No | Name of the staff member who wrote the review |
+| `review_text` | No | The staff review text |
 
-**Example:**
+When `reviewer` and `review_text` columns are present, they appear as draggable fields alongside the standard book metadata.
 
-```
-isbn
-9781593767914
-9780988518391
-```
+**[See an example sheet](https://docs.google.com/spreadsheets/d/1ZzUYjBgQGK5N-1OEwMTh-V16Xu_-riNnschMt91AiBk/edit?usp=sharing)**
 
 Dashes and spaces in ISBNs are stripped automatically. Duplicate ISBNs are deduplicated (first row wins).
 
