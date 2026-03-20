@@ -46,7 +46,21 @@ Your file must have a header row with at minimum an `isbn` column. Column names 
 
 When `reviewer` and `review_text` columns are present, they appear as draggable fields alongside the standard book metadata.
 
-**[See an example sheet](https://docs.google.com/spreadsheets/d/1ZzUYjBgQGK5N-1OEwMTh-V16Xu_-riNnschMt91AiBk/edit?usp=sharing)**
+**ISBNs only** — [example sheet](https://docs.google.com/spreadsheets/d/1BEanYl_STKIJRx1z-hl0pNpv_SXgnGc5lNsEKrmK1ik/edit?usp=sharing):
+
+```
+isbn
+9781593767914
+9780988518391
+```
+
+**With staff reviews** — [example sheet](https://docs.google.com/spreadsheets/d/1ZzUYjBgQGK5N-1OEwMTh-V16Xu_-riNnschMt91AiBk/edit?usp=sharing):
+
+```
+isbn,reviewer,review_text
+9781593767914,Pam,"Read it in one sitting. What else is time for?"
+9780988518391,Denny,"Laugh, cry, get angry. It has everything."
+```
 
 Dashes and spaces in ISBNs are stripped automatically. Duplicate ISBNs are deduplicated (first row wins).
 
