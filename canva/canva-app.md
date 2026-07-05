@@ -1,5 +1,6 @@
 ---
-sidebar_position: 7
+sidebar_position: 1
+slug: /
 ---
 
 # Bookhead for Canva

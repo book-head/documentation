@@ -32,6 +32,18 @@ IBID is a management system for independent bookstores.
 
 IBID automatically exports your inventory to Bookhead's FTP server on an hourly schedule.
 
+### iMRCHNT
+
+iMRCHNT is a management system for independent bookstores.
+
+| | |
+|--|--|
+| **Sync method** | Automatic FTP |
+| **Frequency** | Every hour |
+| **Setup** | Contact support@bookhead.net |
+
+iMRCHNT automatically exports your inventory to Bookhead's FTP server on an hourly schedule.
+
 ### Basil
 
 Basil is an inventory management system for bookstores.
@@ -52,82 +64,37 @@ We recommend uploading at least once a week, or whenever you have significant in
 
 Don't see your bookstore system listed? Email support@bookhead.net. We can often add support for new systems within a few days of receiving sample data.
 
+## In-store sales systems
+
+### Square
+
+Square is an in-store sales system used at the counter. Bookhead connects to
+Square as an inventory source — reading what you carry in the shop, enriching each
+book, and keeping your online store in sync.
+
+| | |
+|--|--|
+| **Sync method** | Square connection |
+| **What syncs** | Catalog, inventory, prices |
+| **Setup** | [See the Square guide →](/docs/square) |
+
+Support for **Clover** is coming soon.
+
+**Setup:** [See the Square guide →](/docs/square)
+
 ---
 
 ## Sales channels
 
-### Squarespace
+Bookhead lists your inventory on a range of online sales channels and keeps each
+one in sync with your inventory source. Each channel has its own setup and
+behavior — see the dedicated documentation for the channel you want to sell on:
 
-Squarespace is a website builder with e-commerce features.
+- **[Shopify](/shopify)** — full product sync, including collections
+- **[Squarespace](/squarespace)** — full product sync with inventory updates
+- **[eBay](/ebay)** — marketplace listings
+- **[Biblio](/biblio)** — marketplace for used and rare books
+- **[Alibris](/alibris)** — marketplace for used, rare, and out-of-print books
 
-| | |
-|--|--|
-| **Sync method** | API |
-| **What syncs** | Products, inventory, prices, tags |
-| **Limitations** | Categories must be set via CSV import (API doesn't support categories) |
-
-**How it works:** Bookhead creates and updates products on your Squarespace store automatically. When inventory changes in your bookstore, Bookhead updates the Squarespace listing within 30 minutes.
-
-**Good to know:**
-- Product categories can't be set via API - you'll need to [import them via CSV](/docs/channels#importing-categories-to-squarespace)
-- Tags sync automatically and can be used for filtering
-- Inventory updates are near real-time
-
-**Setup:** [See Squarespace setup guide →](/docs/channels#squarespace)
-
-### Shopify
-
-Shopify is an e-commerce platform for online stores.
-
-| | |
-|--|--|
-| **Sync method** | API |
-| **What syncs** | Products, inventory, prices, collections, tags |
-| **Limitations** | None - full API support |
-
-**How it works:** Bookhead creates products, manages inventory, and syncs collections to your Shopify store. This is our most full-featured integration.
-
-**Good to know:**
-- Collections sync automatically from Bookhead
-- Full metafield support for rich product data
-- Inventory locations supported
-
-**Setup:** [See Shopify setup guide →](/docs/channels#shopify)
-
-### eBay
-
-eBay is an online marketplace.
-
-| | |
-|--|--|
-| **Sync method** | API |
-| **What syncs** | Listings, inventory |
-| **Best for** | Used and rare books |
-
-**How it works:** Bookhead creates listings on eBay for your inventory. Great for reaching buyers searching for specific titles.
-
-**Good to know:**
-- Listings are created in your eBay seller account
-- Inventory syncs when books sell or quantities change
-- Good for books that might not sell locally
-
-### Biblio
-
-Biblio is a marketplace specifically for used, rare, and out-of-print books.
-
-| | |
-|--|--|
-| **Sync method** | FTP/CSV |
-| **What syncs** | Listings, inventory |
-| **Best for** | Used and rare books |
-
-**How it works:** Bookhead exports your inventory to Biblio's format, making your books discoverable to collectors and book lovers.
-
-**Good to know:**
-- Biblio specializes in used and rare books
-- Great for reaching collectors
-- Syncs via scheduled file exports
-
-### Other channels
-
-We're always adding new integrations. If there's a platform you'd like to sell on, email support@bookhead.net to let us know.
+For a quick overview, see [Selling on channels](./sales-channels.md). Don't see
+the channel you want? Email support@bookhead.net.

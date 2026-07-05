@@ -33,6 +33,8 @@ We currently support automatic syncing with:
 
 Each data source has a slightly different way of doing things, like with different column names or capitalization schemes, and Bookhead can work with a variety of formats. Our system is designed so it's easy for us to add a new customer or bookstore system.
 
+**In-store sales systems:** Bookhead also connects to **Square** as an inventory source (Clover coming soon), reading what you carry in the shop and keeping your online store in sync. See the [Square guide](square.md).
+
 #### How the sync works
 
 1. **Your bookstore exports inventory** - Your bookstore system automatically sends an inventory file to our secure SFTP server
@@ -67,6 +69,11 @@ If you can't use automatic FTP syncing, you can manually upload inventory files 
 - **Existing ISBNs** are updated with the new price/quantity
 - **Invalid ISBNs** are flagged so you can fix them
 - You'll see a summary of what was created, updated, and any errors
+
+**Distributor order files:** You can also import order files from **Ingram** or
+**Edelweiss** — for example, after receiving a shipment — and Bookhead brings
+those titles in ready to sell. For related Ingram features, see [Special
+orders](special-orders.md).
 
 #### Required fields
 
@@ -249,7 +256,7 @@ These models have relationships:
 The `Copy` will be what you are selling online. This is the product that you can hold in your hands at your store and ship out to customers. Combined with bibliographic data about the `Work` and `Edition`, your `Copy` will be listed on your sales channels with the bibliographic data that describes that particular product.
 
 ### A Copy of a book is a powerful thing
-The `Copy` can be listed on multiple sales channels, like Squarespace, Biblio, and eBay. For more information about that, [see our documentation about `channels`](/docs/channels.md).
+The `Copy` can be listed on multiple sales channels, like Squarespace, Biblio, and eBay. For more information about that, [see our documentation about selling on channels](/docs/sales-channels).
 
 ### Data privacy and control
 We only share your inventory data with the third party platforms which you explicity consent to. We're able to share your inventory data with Squarespace, Biblio, eBay, and Shopify. We will share your data if you choose to share the data with a specific platform, and the data will only be shared with an account on the platform that you control.

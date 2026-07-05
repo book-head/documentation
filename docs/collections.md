@@ -35,7 +35,7 @@ From the collections list, you can:
 
 Collections sync to **Shopify** as Custom Collections. When you create or update a collection in Bookhead, it automatically syncs to your Shopify store within 15 minutes.
 
-**Note:** Squarespace doesn't support collections via API. For Squarespace, use [categories](/docs/channels#managing-product-categories) instead.
+**Note:** Squarespace doesn't support collections via API. For Squarespace, use [categories](/squarespace/categories) instead.
 
 ## Staff picks
 
