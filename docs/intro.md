@@ -39,5 +39,5 @@ Automatically sync inventory from your bookstore software. Includes an interface
 ### [Selling on channels](./sales-channels.md)
 List your inventory on multiple sales channels. Keeps inventory up to date based on your store's local inventory.
 
-### [Collections and staff picks](./collections.md)
-Create curated book lists to feature on your website - staff recommendations, seasonal themes, and more.
+### [Book lists](./collections.md)
+Build curated lists of books to feature on your website or to define what your online store sells. Add books by hand or with rules, then publish.
